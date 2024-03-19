@@ -1,7 +1,49 @@
+{% extends 'food/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foods</title>
+
+   
+  </head>
+  <body>
+    <div class="container">
+
+ 
+    {% block body %} 
+    
 {%for item in item_list%}
+
+    <div class="row mb-3">
+        <div class="col-md-3 col-md-offset-2" >
+            <img src="{{item.item_image}}" alt="" height="200px" width="200px" class="card">
+        </div>
+        <div class="col-md-4">
+            <h3>{{item.item_name}}</h3>
+            <h5>{{item.item_desc}}</h5>
+            <h6>{{item.item_price}}</h6>
+            <h5>posted_by {{item.user_name}}</h5>
+        </div>
+        <div class="col-md-2">
+            <a href="{% url 'food:detail' item.id %}" class="btn btn-success">Details</a>
+        </div>
+    </div>
+
+    {% endfor %} 
+    
+    this is old code
+    {%for item in item_list%}
     <ul>
-        <li>
-            {{item.id}} -- {{item.item_name}}
-        </li>
+      <li>
+        <a href="{% url 'food:detail' item.id %}"
+          >{{item.id}} -- {{item.item_name}}</a
+        >
+      </li>
     </ul>
-{% endfor %}
+    {% endfor %} {%endblock %}
+
+  </div>
+  </body>
+</html>

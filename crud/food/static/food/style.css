@@ -1,0 +1,29 @@
+body{
+    background-color: lightyellow;
+}
+ul.navbar{
+    list-style-type: none;
+  
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+ul.navbar li{
+
+    margin:0 1rem;
+
+}
+ul.navbar a{
+    text-decoration: none;
+}
+ul.navbar button{
+    background-color: transparent;
+    border:none
+
+}
+
+.btn-info{
+    background-color: #0dcaf0 !important;
+    border: none;
+    color:white
+}
