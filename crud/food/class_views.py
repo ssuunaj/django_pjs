@@ -3,6 +3,7 @@ from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
 from .models import Item
 
+
 """These class based views correspond to the functions views in the views.py file"""
 class IndexClassView(ListView):
     model = Item
