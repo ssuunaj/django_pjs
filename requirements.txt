@@ -3,3 +3,4 @@ djangorestframework>=3.12.4e
 pillow
 requests
 beautifulsoup4
+pdfkit
