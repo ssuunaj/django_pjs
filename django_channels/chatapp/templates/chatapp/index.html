@@ -1,0 +1,5 @@
+<h3>List of all rooms</h3>
+
+{% for chatroom in chatrooms %}
+    <a href="{% url 'chatroom' chatroom.slug %}">{{chatroom.name}}</a><br>
+{% endfor%}

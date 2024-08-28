@@ -1,5 +1,5 @@
 Django>=3.2.5
-djangorestframework>=3.12.4e
+djangorestframework>=3.12.4
 pillow
 requests
 beautifulsoup4
