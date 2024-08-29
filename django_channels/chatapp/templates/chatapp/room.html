@@ -1,7 +1,13 @@
+{% extends 'chatapp/base.html' %}
+
+{% block body %}
+
 {{chatroom.name}}
 
 <div id="chat_messages">
-
+    {% for message in messages %}
+        {{ message.user.username }}: {{message.message}} <br>
+    {% endfor %}
 </div>
 
 <form method="post">
@@ -33,7 +39,7 @@
         if (data.message){
             console.log('Received message to client is ', data.message)
 
-            let html = data.username + ':' + data.message + '<br>'
+            let html = data.username + ' :' + data.message + '<br>'
 
             document.getElementById('chat_messages').innerHTML+=html
         }else{
@@ -61,7 +67,6 @@
     }
 
 
-
-
-
 </script>
+
+{% endblock%}
